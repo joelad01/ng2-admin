@@ -5,6 +5,7 @@ import { AppTranslationModule } from '../../app.translation.module';
 import { NgaModule } from '../../theme/nga.module';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { DataFilterPipe } from '../tables/components/dataTables/data-filter.pipe';
+import { CKEditorModule } from 'ng2-ckeditor';
 import { HotTable, HotTableModule } from 'ng2-handsontable';
 
 import { NewComponent } from './new.component';
@@ -27,6 +28,7 @@ import { PieChartService } from './pieChart/pieChart.service';
 import { TrafficChartService } from './trafficChart/trafficChart.service';
 import { UsersMapService } from './usersMap/usersMap.service';
 import { SmartTablesService } from './smartTables/smartTables.service';
+import { Ckeditor } from './ckeditor';
 
 
 @NgModule({
@@ -36,6 +38,7 @@ import { SmartTablesService } from './smartTables/smartTables.service';
     AppTranslationModule,
     NgaModule,
     Ng2SmartTableModule,
+    CKEditorModule,
     routing
   ],
   declarations: [
@@ -48,6 +51,7 @@ import { SmartTablesService } from './smartTables/smartTables.service';
     //Todo,
     Calendar,
     SmartTables,
+    Ckeditor,
     NewComponent
 
   ],
