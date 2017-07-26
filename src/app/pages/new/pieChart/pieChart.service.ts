@@ -7,6 +7,11 @@ export class PieChartService {
   newVisits: number = 700;
   fbPercent: number = 90;
 
+  licenceCount: number = 5;
+  computerCount: number = 3;
+  revenueCount: any = '$52,000';
+  utilisationCount: any = '80% utilised';
+
   constructor(private _baConfig:BaThemeConfigProvider) {
 
 
@@ -17,28 +22,28 @@ export class PieChartService {
     return [
       {
         color: pieColor,
-        description: 'dashboard.new_visits',
-        stats: this.newVisits,
+        description: 'Licenses',
+        stats: this.licenceCount,
         icon: 'person',
-        percent: 10,
+        percent: 33,
       }, {
         color: pieColor,
-        description: 'dashboard.purchases',
-        stats: '$ 89,745',
+        description: 'Computers',
+        stats: this.computerCount,
         icon: 'money',
-        percent: this.fbPercent,
+        percent: 50,
       }, {
         color: pieColor,
-        description: 'dashboard.active_users',
-        stats: '178,391',
-        icon: 'face',
-        percent: this.fbPercent,
+        description: 'Revenue',
+        stats: this.revenueCount,
+        icon: 'money',
+        percent: 12,
       }, {
         color: pieColor,
-        description: 'dashboard.returned',
-        stats: '32,592',
+        description: 'Utilisation',
+        stats: this.utilisationCount,
         icon: 'refresh',
-        percent: this.fbPercent,
+        percent: 80,
       }
     ];
   }
